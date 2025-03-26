@@ -64,17 +64,7 @@ window.onload = () => {
     canvas.classList.add("visible");
   }, 300);
 
-  // Show navbar & socials
  
-
-  setTimeout(() => {
-    document.querySelector(".bottom-nav").classList.add("show");
-    document.querySelector(".socials").classList.add("show");
-    document.getElementById("typed-line").classList.add("show");
-    document.getElementById("subtitle-title").classList.add("show");
-    document.getElementById("subtitle-text").classList.add("show");
-    document.getElementById("btn-more").classList.add("show");
-  }, 1000);
 
   // Start typing
   setTimeout(typeTitle, 2000);

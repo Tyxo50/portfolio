@@ -16,8 +16,8 @@ const lines = [
   
   // Delays
   const charDelay = 100;         // vitesse de frappe
-  const delaySystemLine = 350;  // délai après une ligne système
-  const delayAfterCommand = 350; // délai après une commande
+  const delaySystemLine = 100;  // délai après une ligne système
+  const delayAfterCommand = 100; // délai après une commande
   
   function typeCommand(prompt, command, callback) {
     let i = 0;
@@ -84,7 +84,7 @@ const lines = [
     if (lineIndex >= lines.length) {
       setTimeout(() => {
         window.location.href = "portfolio.html"; // À adapter si tu veux afficher le reste sur la même page
-      }, 1500);
+      }, 100);
       return;
     }
   

@@ -36,8 +36,6 @@ body {
   align-items: center;
   gap: 20px;
   z-index: 999;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .socials.show {
   opacity: 1;
@@ -82,13 +80,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.bottom-nav.show {
-  opacity: 1;
-  transform: translateX(-50%);
-}
+
 .bottom-nav ul {
   list-style: none;
   display: flex;
@@ -298,6 +291,7 @@ body {
   font-family: 'Courier New', Courier, monospace;
   color: #33ff33;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
