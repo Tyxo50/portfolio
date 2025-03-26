@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .terminal {
+    width: 90%;
+    max-width: 900px;
+    font-size: 1rem;
+    white-space: pre-wrap;
+  }
+  
+  /* Couleurs comme dans le terminal */
+  .user {
+    color: #33ff33; /* vert */
+  }
+  .path {
+    color: #3399ff; /* bleu */
+  }
+  .command {
+    color: white; /* blanc par défaut */
+  }
+  .typing-cursor {
+    display: inline-block;
+    margin-left: 4px;
+    animation: blink 1s step-start infinite;
+    color: #00ff00;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+    
