@@ -16,8 +16,8 @@ const lines = [
   
   // Delays
   const charDelay = 100;         // vitesse de frappe
-  const delaySystemLine = 100;  // délai après une ligne système
-  const delayAfterCommand = 100; // délai après une commande
+  const delaySystemLine = 75;  // délai après une ligne système
+  const delayAfterCommand = 75; // délai après une commande
   
   function typeCommand(prompt, command, callback) {
     let i = 0;
@@ -55,7 +55,7 @@ const lines = [
     const total = 20;
   
     const interval = setInterval(() => {
-      progress += Math.floor(Math.random() * 3) + 1; // +1 à +3%
+      progress += Math.floor(Math.random() * 3) + 2; // +1 à +3%
       if (progress > 100) progress = 100;
   
       const filledBars = Math.floor((progress / 100) * total);
@@ -77,7 +77,7 @@ const lines = [
         output.innerHTML += "\n";
         setTimeout(callback, 1500);
       }
-    }, 50);
+    }, 10);
   }
   
   function processLines() {
