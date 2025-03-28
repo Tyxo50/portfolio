@@ -17,15 +17,14 @@ body {
     white-space: pre-wrap;
   }
   
-  /* Couleurs comme dans le terminal */
   .user {
-    color: #33ff33; /* vert */
+    color: #33ff33;
   }
   .path {
-    color: #3399ff; /* bleu */
+    color: #3399ff;
   }
   .command {
-    color: white; /* blanc par défaut */
+    color: white; 
   }
   .typing-cursor {
     display: inline-block;

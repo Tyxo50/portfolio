@@ -12,18 +12,18 @@
 
   <nav class="bottom-nav">
     <ul>
-      <li><a href="#home" class="active"><span class="nav-icon">T</span></a></li>
-      <li><a href="#about"><i class="fas fa-user"></i></a></li>
-      <li><a href="#skills"><i class="fas fa-tools"></i></a></li>
-      <li><a href="#projects"><i class="fas fa-folder-open"></i></a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="#home" class="active"><i class="fas fa-terminal"></i><span class="label">Home</span></a></li>
+      <li><a href="#moreabout" data-open-tab="infos"><i class="fas fa-user"></i><span class="label">About</span></a></li>
+      <li><a href="#moreabout" data-open-tab="skills"><i class="fas fa-tools"></i><span class="label">Skills</span></a></li>
+      <li><a href="#moreabout" data-open-tab="projects"><i class="fas fa-folder-open"></i><span class="label">Projects</span></a></li>
+      <li><a href="#contact" data-open-tab="contact"><i class="fas fa-envelope"></i><span class="label">Contact</span></a></li>
     </ul>
   </nav>
 
   <div class="socials">
-    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/Tyxo50" target="_blank" class="social-item"><i class="fab fa-github"></i><span class="label">GitHub</span></a>
+    <a href="https://www.linkedin.com/in/tomlelievree/" target="_blank" class="social-item"><i class="fab fa-linkedin-in"></i><span class="label">LinkedIn</span></a>
+    <a href="https://www.instagram.com/tom.lelievree/" target="_blank" class="social-item"><i class="fab fa-instagram"></i><span class="label">Instagram</span></a>
     <div class="line"></div>
   </div>
 
@@ -33,9 +33,7 @@
         <p class="terminal-prefix" id="typed-line">&gt; Hello world, I'm</p>
         <h1><span class="green" id="typed-title"></span><span class="cursor">█</span></h1>
         <h2 class="subtitle-title" id="subtitle-title">Cybersecurity Engineering Student</h2>
-        <p class="subtitle" id="subtitle-text">
-          Passionate about ethical hacking, Linux systems, and building secure solutions.
-        </p>
+        <p class="subtitle" id="subtitle-text">Passionate about ethical hacking, Linux systems, and building secure solutions.</p>
         <div class="btn-group" id="btn-more">
           <a href="#moreabout" class="btn blue animate-up">cd /More_About_me</a>
         </div>
@@ -50,30 +48,110 @@
             </div>
             <div class="terminal-title">Play with me :)</div>
           </div>
-          <div class="terminal-content">
-          </div>
+          <div class="terminal-content"></div>
         </div>
       </div>
     </div>
   </main>
 
   <section class="section-terminal-full" id="moreabout">
-    <div class="section-title">More About Me</div>
+    <div class="section-title">More About Me <span id="spinner" class="green">|</span></div>
     <div class="terminal-full-window">
-      <div class="terminal-bar">
+      <div class="terminal-bar with-tabs">
         <div class="dots">
           <span class="dot red"></span>
           <span class="dot yellow"></span>
           <span class="dot green"></span>
         </div>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="infos">
+            <i class="fas fa-user"></i> <span class="label">Infos</span>
+          </button>
+          <button class="tab-btn" data-tab="skills">
+            <i class="fas fa-tools"></i> <span class="label">Skills</span>
+          </button>
+          <button class="tab-btn" data-tab="projects">
+            <i class="fas fa-folder-open"></i> <span class="label">Projects</span>
+          </button>
+          <button class="tab-btn" data-tab="contact">
+            <i class="fas fa-envelope"></i> <span class="label">Contact</span>
+          </button>
+        </div>
         <div class="terminal-title">terminal — bash</div>
       </div>
-      <div class="terminal-full-content">
-        <p class="green">[ Terminal chargé avec succès... ]</p>
+
+      <div class="terminal-tab-content">
+        <div class="tab-pane active" id="infos">
+          <div class="terminal-full-content">
+            <div class="terminal-layout">
+              <div class="terminal-left" id="man-text"></div>
+              <div class="terminal-right">
+                <img src="assets/selfie.png" alt="Tom Lelievre" class="profile-pic" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="skills">
+          <div class="terminal-full-content"></div>
+        </div>
+
+        <div class="tab-pane" id="projects">
+          <div class="terminal-full-content">
+            <div class="terminal-layout">
+              <div class="terminal-left" id="projects-output"></div>
+              <div class="terminal-right">
+                <i class="fab fa-github fa-5x grey"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="contact">
+          <div class="terminal-full-content">
+            <div class="terminal-layout">
+              <div class="terminal-left" id="contact-output"></div>
+              <div class="terminal-right">
+                <i class="fas fa-envelope fa-5x grey"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <p><strong>Tom Lelievre</strong> — Cybersecurity & Dev</p>
+        <p>Made with <i class="fas fa-heart red"></i> in Html, CSS & JS</p>
+      </div>
+      <div class="footer-section">
+        <p><a href="mailto:tom.lelievre@isen-ouest.yncrea.fr">tom.lelievre@isen-ouest.yncrea.fr</a></p>
+        <p>
+           
+          <a href="https://www.linkedin.com/in/tomlelievree/" target="_blank"><i class="fab fa-linkedin-in"></i></a> |
+          <a href="https://github.com/Tyxo50" target="_blank"><i class="fab fa-github"></i></a> |
+          <a href="#contact" data-open-tab="contact"><i class="fas fa-paper-plane"></i></a> |
+          <a href="https://www.instagram.com/tom.lelievree/" target="_blank"><i class="fab fa-instagram"></i></a> 
+        </p>
+      </div>
+      <div class="footer-section">
+        <p>Last update: Mars 2025</p>
+        <p>© 2025 Tom Lelievre. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="portfolio.js"></script>
+  <script src="aboutme.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function(){
+    emailjs.init("tyRdKlo_hjpXE3L7Z"); 
+  })();
+</script>
 </body>
 </html>
