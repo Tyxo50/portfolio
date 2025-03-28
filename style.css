@@ -1,40 +1,57 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.terminal {
+  width: 90%;
+  max-width: 900px;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  padding: 1rem;
+}
+
+.user {
+  color: #33ff33;
+}
+.path {
+  color: #3399ff;
+}
+.command {
+  color: white; 
+}
+.typing-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 1s step-start infinite;
+  color: #00ff00;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 600px) {
   .terminal {
-    width: 90%;
-    max-width: 900px;
-    font-size: 1rem;
-    white-space: pre-wrap;
+    font-size: 0.9rem;
+    padding: 0.8rem;
   }
-  
-  .user {
-    color: #33ff33;
+}
+
+@media (max-width: 400px) {
+  .terminal {
+    font-size: 0.8rem;
+    padding: 0.6rem;
   }
-  .path {
-    color: #3399ff;
-  }
-  .command {
-    color: white; 
-  }
-  .typing-cursor {
-    display: inline-block;
-    margin-left: 4px;
-    animation: blink 1s step-start infinite;
-    color: #00ff00;
-  }
-  
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-    
+}
