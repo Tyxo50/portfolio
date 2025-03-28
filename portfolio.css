@@ -320,6 +320,8 @@ body {
   min-width: 280px;
   color: #ccc;
   white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
   font-family: 'Courier New', monospace;
 }
 
@@ -629,6 +631,12 @@ body {
     width: 100% !important;
     margin-left: 0 !important;
   }
+
+  .terminal-content {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+  
   
   
 
