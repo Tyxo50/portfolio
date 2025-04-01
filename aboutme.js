@@ -299,21 +299,7 @@ function displayContactForm() {
       statusEl.textContent = "Soumission en cours" + ".".repeat(dots);
     }, 400);
 
-    // EmailJS config
-    emailjs.send("service_rgj26ee", "template_cjuk7fc", {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-      title: "Message via portfolio" 
-    }).then(() => {
-      clearInterval(anim);
-      statusEl.innerHTML = `<span class="blue">[OK] Email envoyé ✔</span>`;
-      form.reset();
-    }).catch((error) => {
-      clearInterval(anim);
-      statusEl.innerHTML = `<span class="red">Erreur d'envoi 😢</span>`;
-      console.error("Erreur EmailJS:", error);
-    });
+    
   });
 }
 
