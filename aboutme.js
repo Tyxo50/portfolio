@@ -289,18 +289,45 @@ function displayContactForm() {
   });
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const statusEl = document.getElementById("email-status");
-    let dots = 0;
-    statusEl.textContent = "Soumission en cours";
-    const anim = setInterval(() => {
-      dots = (dots + 1) % 4;
-      statusEl.textContent = "Soumission en cours" + ".".repeat(dots);
-    }, 400);
+  const statusEl = document.getElementById("email-status");
+  let dots = 0;
+  statusEl.textContent = "Soumission en cours";
+  const anim = setInterval(() => {
+    dots = (dots + 1) % 4;
+    statusEl.textContent = "Soumission en cours" + ".".repeat(dots);
+  }, 400);
 
-    
-  });
+  const formData = new FormData(form);
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message")
+  };
+
+  fetch("https://email-backend-w336.onrender.com/send-email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => response.json())
+    .then(result => {
+      clearInterval(anim);
+      if (result.success) {
+        statusEl.innerHTML = `<span class="blue">[OK] Email envoyé avec succès.</span>`;
+        form.reset();
+      } else {
+        statusEl.innerHTML = `<span class="red">[ERREUR] ${result.error}</span>`;
+      }
+    })
+    .catch(error => {
+      clearInterval(anim);
+      statusEl.innerHTML = `<span class="red">[ERREUR] ${error}</span>`;
+    });
+});
 }
 
 
