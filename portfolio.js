@@ -215,6 +215,10 @@ window.onload = () => {
   terminalContent.appendChild(initial);
 
   setTimeout(startMorpionTyping, 3500);
+
+  fetch("https://email-backend-w336.onrender.com")
+    .then(() => console.log("[Ping] Backend réveillé au chargement"))
+    .catch(() => console.warn("[Ping] Échec du ping au chargement"));
 };
 
 const footer = document.querySelector("footer");
