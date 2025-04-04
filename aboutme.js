@@ -55,7 +55,7 @@ const projectsData = [
   {
     name: "ClaviSure",
     desc: "Python app using typing biometrics to authenticate users continuously. Built with Python, Flask, JavaScript. Implements ML classification.",
-    url: "https://github.com/Elouaaaan/ClaviSure"
+    url: ""
   },
   {
     name: "Secure File Sharing Platform",
@@ -71,11 +71,6 @@ const projectsData = [
     name: "Tree Age & Storm Risk Prediction",
     desc: "AI web app predicting tree age & risk of uprooting during storms.",
     url: "https://github.com/eltar14/projet_web_S6"
-  },
-  {
-    name: "Web Music App",
-    desc: "Spotify-like project to stream and explore music.",
-    url: "https://github.com/Goustan-Sermon/Final_project_CIR2"
   },
   {
     name: "IoT Cold Room Alert System ",
